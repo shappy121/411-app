@@ -1,39 +1,44 @@
-document.getElementById("changeText").addEventListener("click", function() {
- document.getElementById("demo").textContent = "You've learned how to change this text using JavaScript!";
-});
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('nameForm');
+    const resultDiv = document.getElementById('result');
+    const babyNamePara = document.getElementById('babyName');
 
-// Change the text content and style of the paragraph
-function changeTextAndStyle() {
-    const demoParagraph = document.getElementById("demo");
-    demoParagraph.textContent = "You've learned how to manipulate the DOM with JavaScript!";
-    demoParagraph.style.color = "blue";
-    demoParagraph.style.fontWeight = "bold";
-   }
-   // Add a new element to the DOM
-   function addNewElement() {
-    const newElement = document.createElement("p");
-    newElement.textContent = "This is a new paragraph added by JavaScript!";
-    newElement.style.color = "green";
-    document.body.appendChild(newElement);
-}
-// Remove an element from the DOM
-function removeElement() {
- const demoParagraph = document.getElementById("demo");
- if (demoParagraph) {
- demoParagraph.remove();
- }
-}
-// Listen for clicks on the 'Change Text' button
-document.getElementById("changeText").addEventListener("click", function() {
- changeTextAndStyle();
- addNewElement();
- // Uncomment the next line to enable element removal:
- // removeElement();
-});
-// Example of listening for a mouseover event
-document.getElementById("changeText").addEventListener("mouseover", function() {
- this.style.backgroundColor = "red";
-});
-document.getElementById("changeText").addEventListener("mouseout", function() {
- this.style.backgroundColor = "#008CBA";
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        const yourName = document.getElementById('yourName').value.trim();
+        const partnerName = document.getElementById('partnerName').value.trim();
+        const location = document.getElementById('location').value.trim();
+
+        if (yourName === '' || partnerName === '' || location === '') {
+            alert('Please fill in all fields.'); // Display an alert if any field is empty
+            return;
+        }
+
+        // Call the function to fetch suggested baby name
+        getSuggestedBabyName(yourName, partnerName, location);
+    });
+
+    async function getSuggestedBabyName(yourName, partnerName, location) {
+        const url = `https://api.example.com/suggest-name?yourName=${yourName}&partnerName=${partnerName}&location=${location}`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (response.ok) {
+                const suggestedName = data.suggestedName;
+                displaySuggestedName(suggestedName);
+            } else {
+                throw new Error(data.message);
+            }
+        } catch (error) {
+            alert('An error occurred while fetching data: ' + error.message);
+        }
+    }
+
+    function displaySuggestedName(name) {
+        babyNamePara.textContent = name;
+        resultDiv.style.display = 'block'; // Show the result section
+    }
 });
