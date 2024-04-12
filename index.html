@@ -8,22 +8,119 @@
 </head>
 <body>
     <div class="container">
-        <h1>babynamer3000</h1>
-        <h2>let us name your baby, pet, whatever you want!</h2> <!-- New subheading -->
+        <h1>BabyNamer3000</h1>
+        <h2>Let us name your baby, pet, or whatever else you want to name!</h2> <!-- New subheading -->
         <form id="nameForm">
             <div class="form-group">
-                <label for="yourName">your first name:</label>
+                <label for="yourName">Your First Name:</label>
                 <input type="text" id="yourName" name="yourName" required>
             </div>
             <div class="form-group">
-                <label for="partnerName">partner's first name:</label>
+                <label for="partnerName">Partner's First Name:</label>
                 <input type="text" id="partnerName" name="partnerName" required>
             </div>
             <div class="form-group">
-                <label for="location">your geographic location:</label>
-                <input type="text" id="location" name="location" required>
+                <label for="siblingName">Sibling's First Name:</label>
+                <input type="text" id="siblingName" name="siblingName" required>
             </div>
-            <button type="submit">name my baby!</button>
+            <div class="form-group">
+                <label for="location">Your Nationality/Geographic Location:</label>
+                <select id="nationality" name="nationality">
+                    <option value="Aboriginal">Abaroginal</option>
+                    <option value="African">African</option>
+                    <option value="Albanian">Albanian</option>
+                    <option value="American">American</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="Aramaic">Aramaic</option>
+                    <option value="Armenian">Armenian</option>
+                    <option value="Aztec">Aztec</option>
+                    <option value="Basque">Basque</option>
+                    <option value="Bulgarian">Bulgarian</option>
+                    <option value="Cambodian">Cambodian</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Dutch">Dutch</option>
+                    <option value="Egyptian">Egyptian</option>
+                    <option value="English">English</option>
+                    <option value="Estonian">Estonian</option>
+                    <option value="Filipino">Filipino</option>
+                    <option value="French">French</option>
+                    <option value="German">German</option>
+                    <option value="Greek">Greek</option>
+                    <option value="Haitian">Haitian</option>
+                    <option value="Hawaiian">Hawaiian</option>
+                    <option value="Hebrew">Hebrew</option>
+                    <option value="Hungarian">Hungarian</option>
+                    <option value="Incan">Incan</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Indonesian">Indonesian</option>
+                    <option value="Irish">Irish</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Japonese">Japonese</option>
+                    <option value="Korean">Korean</option>
+                    <option value="Latin">Latin</option>
+                    <option value="Lithuanian">Lithuanian</option>
+                    <option value="Malaysian">Malaysian</option>
+                    <option value="Maori">Maori</option>
+                    <option value="Mongolian">Mongolian</option>
+                    <option value="Native American">Native American</option>
+                    <option value="Malaysian">Malaysian</option>
+                    <option value="Persian">Persian</option>
+                    <option value="Polish">Polish</option>
+                    <option value="Polynesian">Polynesian</option>
+                    <option value="Portuguese">Portuguese</option>
+                    <option value="Romanian">Romanian</option>
+                    <option value="Romansh">Romansh</option>
+                    <option value="Russian">Russian</option>
+                    <option value="Scandinavian">Scandinavian</option>
+                    <option value="Slavic">Slavic</option>
+                    <option value="Scottish">Scottish</option>
+                    <option value="Spanish">Spanish</option>
+                    <option value="Swahili">Swahili</option>
+                    <option value="Thai">Thai</option>
+                    <option value="Turkish">Turkish</option>
+                    <option value="Vietnamese">Vietnamese</option>
+                    <option value="Welsh">Welsh</option>
+                </select>
+                <input type="submit" value="Submit">
+
+            </div>
+            <div class="form-group">
+                <label for="firstLetter">Desired First Letter of Name:</label>
+                <select id="firstLetter" name="firstLetter">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                    <option value="I">I</option>
+                    <option value="J">J</option>
+                    <option value="K">K</option>
+                    <option value="L">L</option>
+                    <option value="M">M</option>
+                    <option value="N">N</option>
+                    <option value="O">O</option>
+                    <option value="P">P</option>
+                    <option value="Q">Q</option>
+                    <option value="R">R</option>
+                    <option value="S">S</option>
+                    <option value="T">T</option>
+                    <option value="U">U</option>
+                    <option value="V">V</option>
+                    <option value="W">W</option>
+                    <option value="X">X</option>
+                    <option value="Y">Y</option>
+                    <option value="Z">Z</option>
+            </div>
+
+            </div>
+            <div class="form-group">
+                <label for="gender">Baby's Gender:</label>
+                <input type="text" id="gender" name="gender" required>
+            </div>
+            <button type="submit">Name My Baby!</button>
         </form>
         <div id="result" class="hidden">
             <h2>Suggested Baby Name:</h2>
