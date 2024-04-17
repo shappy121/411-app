@@ -12,18 +12,6 @@
         <h2>Let us name your baby, pet, or whatever else you want to name!</h2> <!-- New subheading -->
         <form id="nameForm">
             <div class="form-group">
-                <label for="yourName">Your First Name:</label>
-                <input type="text" id="yourName" name="yourName" required>
-            </div>
-            <div class="form-group">
-                <label for="partnerName">Partner's First Name:</label>
-                <input type="text" id="partnerName" name="partnerName" required>
-            </div>
-            <div class="form-group">
-                <label for="siblingName">Sibling's First Name:</label>
-                <input type="text" id="siblingName" name="siblingName" required>
-            </div>
-            <div class="form-group">
                 <label for="location">Your Nationality/Geographic Location:</label>
                 <select id="nationality" name="nationality">
                     <option value="Aboriginal">Aboroginal</option>
@@ -118,8 +106,12 @@
                 <input type="submit" value="Submit">
             </div>
             <div class="form-group">
-                <label for="gender">Baby's Gender:</label>
-                <input type="text" id="gender" name="gender" required>
+                <label for="gender">Desired Gender for Name:</label>
+                <select id="gender" name="gender">
+                    <option value="All">All</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Girls">Female</option>
+                    <option value="Boys">Male</option>
             </div>
             <button type="submit">Name My Baby!</button>
             <div>
