@@ -1,0 +1,85 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f6f6f6;
+  background-image: url('egg.png');
+  background-repeat: repeat;
+  background-position: center center;
+}
+
+/* Container styles */
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading styles */
+h1 {
+  color: #FF6B6B;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  background-color: #FF6B6B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FF5252;
+}
+
+/* Result styles */
+#result {
+  margin-top: 30px;
+  display: none;
+}
+
+#result h2 {
+  color: #FF6B6B;
+  margin-bottom: 10px;
+}
+
+#babyName {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
