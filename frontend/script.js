@@ -75,4 +75,9 @@ function displayModal(suggestedName) {
   suggestedNamePara.textContent = suggestedName;
   modal.style.display = "block";
 }
+//goback button on results page to navigate to prev page:
+function goBack() {
+    window.history.back();
+}
+
 });
