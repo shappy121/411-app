@@ -28,6 +28,24 @@ let foundLocation = apiLocations.find(location => location.includes(location));
     foundLocation = "random"; // Set to a default location
   }
 
+  const form = document.getElementById('nameForm');
+
+  form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      
+      const gender = document.getElementById('gender').value;
+  
+      try {
+          const response = await fetch(`http://localhost:3000/generate-name?gender=${gender}`);
+          const data = await response.json();
+          
+          // Update DOM with the generated baby name
+          document.getElementById('babyName').textContent = data.name;
+      } catch (error) {
+          console.error('Error:', error);
+      }
+  });
+  
 
 const router = express.Router();
 router.get('/name', async (req, res) => {
