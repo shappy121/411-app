@@ -4,6 +4,9 @@
 
 const axios = require('axios');
 
+
+
+
 async function fetchRandomCity(country) {
   try {
     // Define the payload for the POST request
